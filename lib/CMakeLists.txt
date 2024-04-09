@@ -214,7 +214,7 @@ if (LWS_WITH_SHARED)
 	# not "libwebsocket_shared".
 	set_target_properties(websockets_shared
 		PROPERTIES
-		OUTPUT_NAME websockets)
+		OUTPUT_NAME libwebsockets)
 
 	if (WIN32)
 		# Compile as DLL (export function declarations)

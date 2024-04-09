@@ -235,7 +235,7 @@ option(LWS_WITH_DRIVERS "With generic drivers for gpio, i2c, display etc" OFF)
 #
 # Static / Dynamic build options
 #
-option(LWS_WITH_STATIC "Build the static version of the library" ON)
+option(LWS_WITH_STATIC "Build the static version of the library" OFF)
 option(LWS_WITH_SHARED "Build the shared version of the library" ON)
 option(LWS_LINK_TESTAPPS_DYNAMIC "Link the test apps to the shared version of the library. Default is to link statically" OFF)
 option(LWS_STATIC_PIC "Build the static version of the library with position-independent code" OFF)
@@ -255,11 +255,11 @@ option(LWS_PLAT_BAREMETAL "Build for deeply embedded baremetal" OFF)
 #
 option(LWS_WITHOUT_CLIENT "Don't build the client part of the library" OFF)
 option(LWS_WITHOUT_SERVER "Don't build the server part of the library" OFF)
-option(LWS_WITHOUT_TESTAPPS "Don't build the libwebsocket-test-apps" OFF)
-option(LWS_WITHOUT_TEST_SERVER "Don't build the test server" OFF)
-option(LWS_WITHOUT_TEST_SERVER_EXTPOLL "Don't build the test server version that uses external poll" OFF)
-option(LWS_WITHOUT_TEST_PING "Don't build the ping test application" OFF)
-option(LWS_WITHOUT_TEST_CLIENT "Don't build the client test application" OFF)
+option(LWS_WITHOUT_TESTAPPS "Don't build the libwebsocket-test-apps" ON)
+option(LWS_WITHOUT_TEST_SERVER "Don't build the test server" ON)
+option(LWS_WITHOUT_TEST_SERVER_EXTPOLL "Don't build the test server version that uses external poll" ON)
+option(LWS_WITHOUT_TEST_PING "Don't build the ping test application" ON)
+option(LWS_WITHOUT_TEST_CLIENT "Don't build the client test application" ON)
 #
 # Extensions (permessage-deflate)
 #
@@ -305,7 +305,7 @@ option(LWS_REPRODUCIBLE "Build libwebsockets reproducible. It removes the build 
 if (ESP_PLATFORM OR LWS_WITH_ESP32 OR LWS_PLAT_BAREMETAL OR LWS_PLAT_FREERTOS)
 option(LWS_WITH_MINIMAL_EXAMPLES "Also build the normally standalone minimal examples, for QA" OFF)
 else()
-option(LWS_WITH_MINIMAL_EXAMPLES "Also build the normally standalone minimal examples, for QA" ON)
+option(LWS_WITH_MINIMAL_EXAMPLES "Also build the normally standalone minimal examples, for QA" OFF)
 endif()
 option(LWS_WITH_LWSAC "lwsac Chunk Allocation api" ON)
 option(LWS_WITH_CUSTOM_HEADERS "Store and allow querying custom HTTP headers (H1 only)" ON)
