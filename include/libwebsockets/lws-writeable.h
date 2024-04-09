@@ -143,7 +143,7 @@ LWS_WARN_DEPRECATED;
  * - When:   now
  * - What:   reason
  */
-LWS_VISIBLE int
+LWS_VISIBLE LWS_EXTERN int
 lws_callback_all_protocol_vhost_args(struct lws_vhost *vh,
 				     const struct lws_protocols *protocol,
 				     int reason, void *argp, size_t len);
